@@ -1,0 +1,54 @@
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+table.dataTable th, table.dataTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table.dataTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.dt-length-0 select {
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important; 
+    background-color: #f8f9fa !important;
+}
+
+.dt-paging .dt-paging-button {
+    background-color: #007bff !important;
+    border: 1px solid #007bff !important;
+    color: #fff !important;
+    padding: 5px 10px !important;
+    margin: 0 5px !important;
+    border-radius: 4px !important;
+}
+
+.dt-paging .dt-paging-button:hover {
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+    color: #fff !important;
+}
+
+.dt-layout-start {
+    margin-bottom: 10px;
+}
+
+select.dt-input {
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important; 
+    background-color: #f8f9fa !important;
+    margin-left: 10px;
+}
