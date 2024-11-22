@@ -20,6 +20,7 @@
   - **contact_persons_get.php** – pobranie listy wszystkich osób kontaktowych.
   - **packages_get.php** – pobranie dostępnych pakietów.
   - **packages_get_currency.php** – pobranie dostępnych pakietów dla wybranej waluty (po zmianie waluty w formularzu dodawania klienta).
+  - **acc_managers_clients_get** - pobranie danych opiekunow i przypisanych klientow
 
 ### 5. **Katalog `/configs`**
   Zawiera pliki konfiguracyjne:
@@ -39,6 +40,7 @@
   - **client-form.php** – formularz dodawania klienta.
   - **contacts-list.php** – lista wszystkich osób kontaktowych.
   - **packages-list.php** – lista dostępnych pakietów wraz z cenami.
+  - **acc-managers-clients.php** - lista opiekunow i przypisanych klientow
 
 ## Instalacja
 
