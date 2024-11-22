@@ -50,8 +50,6 @@ class Client
         $countries = App::getConf('countries');
 
         App::loadClass('package', SYSROOT);
-
-        $package = new Package();
         
         foreach ($clients_data as $key => $client) {
 
@@ -66,6 +64,7 @@ class Client
             if($client_package) {
                 $package_id = (int) $client_package['package_id'];
 
+                $package = new Package();
                 $package_data = $package->get($package_id);
         
                 $client['package_name'] = $package_data['name'];

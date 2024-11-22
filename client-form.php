@@ -2,7 +2,7 @@
 <?php require_once(SYSROOT . 'app.php'); ?>
 <?php require(DOCROOT . "layout" . DS . "header.php"); ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row mb-3">
         <div class="col-12 bg-white border-rounded-20">
             <div class="px-5 py-5 bg-white">
@@ -56,23 +56,21 @@
                         <input type="text" class="form-control" id="vat_number" name="vat_number" required>
                     </div>
 
-                    <div id="contact-persons-section" class="mb-3">
+                    <div id="contact-persons-section" class="mb-3 mt-3">
                         <h5>Contact Persons</h5>
                         <div class="contact-person mb-3">
                             <h6>Contact Person 1</h6>
                             <div class="row g-3">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="text" class="form-control" name="contact_persons[0][firstname]" placeholder="First Name">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="text" class="form-control" name="contact_persons[0][lastname]" placeholder="Last Name">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="email" class="form-control" name="contact_persons[0][email]" placeholder="Email">
                                 </div>
-                            </div>
-                            <div class="row g-3 mt-2">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="text" class="form-control" name="contact_persons[0][phone]" placeholder="Phone">
                                 </div>
                             </div>
@@ -106,18 +104,16 @@
                 <div class="contact-person mb-3">
                     <h6>Contact Person ${contactPersonIndex + 1}</h6>
                     <div class="row g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][firstname]" placeholder="First Name">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][lastname]" placeholder="Last Name">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <input type="email" class="form-control" name="contact_persons[${contactPersonIndex}][email]" placeholder="Email">
                         </div>
-                    </div>
-                    <div class="row g-3 mt-2">
-                        <div class="col-md-4">
+                         <div class="col-md-3">
                             <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][phone]" placeholder="Phone">
                         </div>
                     </div>
