@@ -7,6 +7,17 @@ body {
     border-radius: 20px;
 }
 
+nav {
+    height: 80px;
+}
+
+input:hover,
+select:hover,
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
 table.dataTable {
     width: 100%;
     border-collapse: collapse;

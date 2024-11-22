@@ -10,27 +10,27 @@
                 <hr>
                 <div id="response-message"></div>
                 <form action="<?php echo APP_URL; ?>actions/client_add.php" id="add-client-form" method="post">
-                    <div class="form-group d-flex flex-column">
+                    <div class="form-group my-2">
                         <label for="client_name">Client Name</label>
-                        <input type="text" class="form-control" id="client_name" name="client_name" required>
+                        <input type="text" class="form-control shadow-none" id="client_name" name="client_name" required>
                     </div>
-                    <div class="form-group d-flex flex-column">
+                    <div class="form-group my-2">
                         <label for="company_name">Company Name</label>
-                        <input type="text" class="form-control" id="company_name" name="company_name" required>
+                        <input type="text" class="form-control shadow-none" id="company_name" name="company_name" required>
                     </div>
-                    <div class="form-group d-flex flex-column">
+                    <div class="form-group my-2">
                         <label for="country">Country</label>
                         <?php $countries = App::getConf('countries'); ?>
-                        <select class="form-control" id="country" name="country" required>
+                        <select class="form-control shadow-none" id="country" name="country" required>
                             <?php foreach ($countries as $k => $v) { ?>
                                 <option value="<?php echo $k; ?>"><?php echo $v; ?></option>
                             <?php } ?>
                         </select>
                     </div>
-                    <div class="form-group d-flex flex-column">
+                    <div class="form-group my-2">
                         <label for="currency">Currency</label>
                         <?php $currencies = App::getConf('currencies'); ?>
-                        <select class="form-control" id="currency" name="currency" required>
+                        <select class="form-control shadow-none" id="currency" name="currency" required>
                             <?php foreach ($currencies as $k => $v) { ?>
                                 <option value="<?php echo $k; ?>"><?php echo $v; ?></option>
                             <?php } ?>
@@ -42,18 +42,18 @@
                     $currencies = App::getConf('currencies');
                     ?>
                     <?php if ($packages) { ?>
-                        <div class="form-group d-flex flex-column">
+                        <div class="form-group my-2">
                             <label for="package">Package</label>
-                            <select class="form-control" id="package" name="package" required>
+                            <select class="form-control shadow-none" id="package" name="package" required>
                                 <?php foreach ($packages as $package) { ?>
                                     <option value="<?php echo $package['id']; ?>"><?php echo $package['name'] . " - " . $package['price'] . ' ' . $currencies[$package['currency']]; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                     <?php } ?>
-                    <div class="form-group d-flex flex-column">
+                    <div class="form-group my-2">
                         <label for="vat_number">Vat Number</label>
-                        <input type="text" class="form-control" id="vat_number" name="vat_number" required>
+                        <input type="text" class="form-control shadow-none" id="vat_number" name="vat_number" required>
                     </div>
 
                     <div id="contact-persons-section" class="mb-3 mt-3">
@@ -62,16 +62,16 @@
                             <h6>Contact Person 1</h6>
                             <div class="row g-3">
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" name="contact_persons[0][firstname]" placeholder="First Name">
+                                    <input type="text" class="form-control shadow-none" name="contact_persons[0][firstname]" placeholder="First Name">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" name="contact_persons[0][lastname]" placeholder="Last Name">
+                                    <input type="text" class="form-control shadow-none" name="contact_persons[0][lastname]" placeholder="Last Name">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="email" class="form-control" name="contact_persons[0][email]" placeholder="Email">
+                                    <input type="email" class="form-control shadow-none" name="contact_persons[0][email]" placeholder="Email">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" name="contact_persons[0][phone]" placeholder="Phone">
+                                    <input type="text" class="form-control shadow-none" name="contact_persons[0][phone]" placeholder="Phone">
                                 </div>
                             </div>
                         </div>
@@ -105,16 +105,16 @@
                     <h6>Contact Person ${contactPersonIndex + 1}</h6>
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][firstname]" placeholder="First Name">
+                            <input type="text" class="form-control shadow-none" name="contact_persons[${contactPersonIndex}][firstname]" placeholder="First Name">
                         </div>
                         <div class="col-md-3">
-                            <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][lastname]" placeholder="Last Name">
+                            <input type="text" class="form-control shadow-none" name="contact_persons[${contactPersonIndex}][lastname]" placeholder="Last Name">
                         </div>
                         <div class="col-md-3">
-                            <input type="email" class="form-control" name="contact_persons[${contactPersonIndex}][email]" placeholder="Email">
+                            <input type="email" class="form-control shadow-none" name="contact_persons[${contactPersonIndex}][email]" placeholder="Email">
                         </div>
                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="contact_persons[${contactPersonIndex}][phone]" placeholder="Phone">
+                            <input type="text" class="form-control shadow-none" name="contact_persons[${contactPersonIndex}][phone]" placeholder="Phone">
                         </div>
                     </div>
                     <hr class="my-4">
