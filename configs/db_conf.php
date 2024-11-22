@@ -5,7 +5,7 @@ $db_params = [
     'host' => 'localhost',
     'user' => 'root',
     'pwd' => '',
-    'db' => 'agency',
+    'db' => 'lmdev_agency',
 ];
 
 define("DB_PARAMS", $db_params);
