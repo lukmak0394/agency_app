@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    const APP_URL = "http://localhost/widoczni-recruitment-task/"; 
+    const APP_URL = "http://localhost/agency_app/"; 
 
     const ACTIONS = {
         addClient: APP_URL + "actions/client_add.php",

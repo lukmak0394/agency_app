@@ -1,3 +1,11 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.border-rounded-20 {
+    border-radius: 20px;
+}
+
 table.dataTable {
     width: 100%;
     border-collapse: collapse;

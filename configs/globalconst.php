@@ -1,6 +1,6 @@
 <?php
 
-define("APP_URL", "http://localhost/widoczni-recruitment-task/");
+define("APP_URL", "http://localhost/agency_app/");
 
 define("DS",DIRECTORY_SEPARATOR);
 define('DOCROOT', str_replace(DS.DS,DS,realpath(dirname(dirname(__FILE__))).DS));
