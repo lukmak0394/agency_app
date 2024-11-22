@@ -47,7 +47,7 @@
 1. Skopiuj pliki na serwer.
 2. Zaimportuj **queries.sql** do swojej bazy danych, wykonując zapytanie do utworzenia bazy danych `lmdev_agency`.
 3. Skonfiguruj połączenie z bazą danych w pliku **/configs/db_conf.php**.
-5. Zmień stała `APP_URL` w pliku `globalconst.php `oraz `main.js`
+5. Zmień stała `APP_URL` w pliku `globalconst.php`
 4. Uruchom aplikację w przeglądarce.
 
 ## Technologie

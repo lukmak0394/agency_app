@@ -1,14 +1,12 @@
 $(document).ready(() => {
 
-    const APP_URL = "http://localhost/agency_app/"; 
-
     const ACTIONS = {
-        addClient: APP_URL + "actions/client_add.php",
-        getClientsData: APP_URL + "actions/clients_get.php",
-        getPackagesData: APP_URL + "actions/packages_get.php",
-        getContactPersonsData: APP_URL + "actions/contact_persons_get.php", 
-        getPackagesForCurrency: APP_URL + "actions/packages_get_currency.php",
-        getAccountManagersClients: APP_URL + "actions/acc_managers_clients_get.php",
+        addClient: "actions/client_add.php",
+        getClientsData: "actions/clients_get.php",
+        getPackagesData: "actions/packages_get.php",
+        getContactPersonsData: "actions/contact_persons_get.php", 
+        getPackagesForCurrency: "actions/packages_get_currency.php",
+        getAccountManagersClients: "actions/acc_managers_clients_get.php",
     } 
 
     const renderResponseAlert = (msg, type) => {
@@ -21,7 +19,8 @@ $(document).ready(() => {
             url: url,
             data: url,
             cache: false,
-            async: true
+            async: true,
+            dataType: "json"
         });
     }
 
