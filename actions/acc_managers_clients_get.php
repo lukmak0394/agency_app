@@ -3,14 +3,13 @@
 require_once("./../configs/globalconst.php");
 require_once(SYSROOT.'app.php');
 
-
 function processRequest() {
 
     header("Content-Type: application/json");   
 
-    App::loadClass('clientcontact', SYSROOT);
+    App::loadClass('accountmanager', SYSROOT);
 
-    $data = ClientContact::getAllContactPersons();
+    $data = AccountManager::getClients();
 
     if(!$data) {
         App::handleJsonResponse('Error getting data');

@@ -8,6 +8,7 @@ $(document).ready(() => {
         getPackagesData: APP_URL + "actions/packages_get.php",
         getContactPersonsData: APP_URL + "actions/contact_persons_get.php", 
         getPackagesForCurrency: APP_URL + "actions/packages_get_currency.php",
+        getAccountManagersClients: APP_URL + "actions/acc_managers_clients_get.php",
     } 
 
     const renderResponseAlert = (msg, type) => {
@@ -111,6 +112,19 @@ $(document).ready(() => {
         }
     }
 
+    const getAccountManagersClients = async () => {
+        try {
+            const res = await getContent(ACTIONS.getAccountManagersClients);
+            if (res.status === "ok") {
+                initializeAccountManagersClientsDataTable(res.data);
+            } else {
+                console.log(res.msg);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
     const initializePackagesDataTable = (data) => {
         const columns = [
             { title: "Name", data: "name" },
@@ -151,7 +165,8 @@ $(document).ready(() => {
             { title: "Last Name", data: "lastname" },
             { title: "Email", data: "email" },
             { title: "Phone", data: "phone" },
-            { title: "Client", data: "client_name" }
+            { title: "Client", data: "client_name" },
+            { title: "Client Company", data: "client_company" },
         ];
 
         $("#contactPersonsTable").DataTable({
@@ -233,6 +248,46 @@ $(document).ready(() => {
                 showContactsModal(clientData);
             }
         });
+    };
+
+    const initializeAccountManagersClientsDataTable = (data) => {
+
+        const columns = [
+            { title: "Firstname", data: "employee_firstname" },
+            { title: "Lastname", data: "employee_lastname" },
+            { title: "Phone", data: "employee_phone" },
+            { title: "Email", data: "employee_email" },
+            { title: "Client Name", data: "client_name" },
+            { title: "Client Company", data: "client_company" },
+
+
+        ];
+    
+        $("#accManagersClientsTable").DataTable({
+            data: data,
+            columns: columns,
+            order: [[0, "desc"]],
+            deferRender: true,
+            processing: true,
+            language: {
+              infoEmpty: "Empty clients data",
+              emptyTable: "Empty clients data",
+              lengthMenu: "<span>Show:</span> _MENU_",
+              paginate: {
+                first: "First",
+                last: "Last",
+                next: "&rarr;",
+                previous: "&larr;",
+              },
+            },
+            pageLength: 25,
+            lengthMenu: [10, 25, 50, 75, 100],
+            destroy: true,
+            paging: true,
+            info: false,
+            searching: false,
+        });
+
     };
 
     const showContactsModal = (clientData) => {
@@ -336,4 +391,5 @@ $(document).ready(() => {
     getClientsData();
     getPackagesData();
     getContactPersonsData();
+    getAccountManagersClients();
 });

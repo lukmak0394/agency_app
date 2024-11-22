@@ -27,7 +27,8 @@ $cfg['pages'] = [
     'client_form' => APP_URL.'client-form.php',
     'clients_list' => APP_URL.'clients-list.php',
     'packages_list' => APP_URL.'packages-list.php',
-    'contacts_list' => APP_URL.'contacts-list.php'
+    'contacts_list' => APP_URL.'contacts-list.php',
+    'acc_managers_clients' => APP_URL.'acc-managers-clients.php'
 ];
 
 define("HELPER_ARRAYS", $cfg);

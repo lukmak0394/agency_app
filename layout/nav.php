@@ -24,6 +24,9 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="<?php echo App::getConf("pages", "contacts_list"); ?>">Contact persons list</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="<?php echo App::getConf("pages", "acc_managers_clients"); ?>">Account managers clients</a>
+        </li>
       </ul>
     </div>
   </div>

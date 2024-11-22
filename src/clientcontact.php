@@ -35,7 +35,8 @@ class ClientContact extends Client
             agency_clients_contacts_persons.lastname AS lastname,
             agency_clients_contacts_persons.email AS email,
             agency_clients_contacts_persons.phone AS phone,
-            agency_clients.company_name AS client_name
+            agency_clients.name AS client_name,
+            agency_clients.company_name AS client_company
         FROM 
             agency_clients_contacts_persons
         LEFT JOIN 
