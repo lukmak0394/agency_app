@@ -3,7 +3,7 @@
 <?php require_once(SYSROOT.'app.php'); ?>
 
 <nav class="navbar navbar-expand-lg bg-primary">
-  <div class="container-fluid">
+  <div class="container d-flex justify-content-end">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

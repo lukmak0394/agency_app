@@ -11,6 +11,10 @@ nav {
     height: 80px;
 }
 
+#navbarNav.show {
+    background-color: #007bff;
+}
+
 input:hover,
 select:hover,
 a:hover,
