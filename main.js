@@ -165,7 +165,7 @@ $(document).ready(() => {
             { title: "Last Name", data: "lastname" },
             { title: "Email", data: "email" },
             { title: "Phone", data: "phone" },
-            { title: "Client", data: "client_name" },
+            { title: "Client Name", data: "client_name" },
             { title: "Client Company", data: "client_company" },
         ];
 
