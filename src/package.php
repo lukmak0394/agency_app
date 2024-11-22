@@ -36,9 +36,14 @@ class Package
         return $this->db->select(['*'])->from('agency_packages')->where("id = ?", [$id])->getRow();
     }
 
-    public static function getPackages(int $currency = 1): array
+    public static function getPackages(int $currency = 0): array
     {
         App::get();
+
+        if(!$currency) {
+            return DbQuery::get()->select(['*'])->from('agency_packages')->getRows();
+        }
+
         return DbQuery::get()->select(['*'])->from('agency_packages')->where("currency = ?", [$currency])->getRows();
     }
 
