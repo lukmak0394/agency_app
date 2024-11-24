@@ -88,7 +88,7 @@ class Client
 
     public function get(int $id = 0): array
     {
-        if (!$this->checkId() || !$id) {
+        if (!$this->checkId() && !$id) {
             return [];
         }
 
