@@ -1,6 +1,6 @@
 <?php
 
-define("APP_URL", "http://localhost/agency_app/");
+define("APP_URL", "https://lmdev.pl/");
 
 define("DS",DIRECTORY_SEPARATOR);
 define('DOCROOT', str_replace(DS.DS,DS,realpath(dirname(dirname(__FILE__))).DS));

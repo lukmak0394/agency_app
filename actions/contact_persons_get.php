@@ -13,11 +13,11 @@ function processRequest() {
     $data = ClientContact::getAllContactPersons();
 
     if(!$data) {
-        App::handleJsonResponse('Error getting data');
+        App::handleJsonResponse('Error getting clients');
         return;
     }
   
-    App::handleJsonResponse('Got data', 'ok', $data);
+    App::handleJsonResponse('Got clients data', 'ok', $data);
 }
 
 processRequest();
